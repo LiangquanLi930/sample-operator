@@ -1,0 +1,6 @@
+apiVersion: cache.openshifttest/v1alpha1
+kind: Sample
+metadata:
+  name: sample-sample
+spec:
+  # TODO(user): Add fields here

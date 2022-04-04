@@ -1,0 +1,19 @@
+domain: openshifttest
+layout:
+- go.kubebuilder.io/v3
+plugins:
+  manifests.sdk.operatorframework.io/v2: {}
+  scorecard.sdk.operatorframework.io/v2: {}
+projectName: sample-operator
+repo: github.com/LiangquanLi930/sample-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: openshifttest
+  group: cache
+  kind: Sample
+  path: github.com/LiangquanLi930/sample-operator/api/v1alpha1
+  version: v1alpha1
+version: "3"
