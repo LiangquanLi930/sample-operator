@@ -1,7 +1,8 @@
 apiVersion: cache.openshifttest/v1alpha1
 kind: Sample
 metadata:
-  name: sample-sample
+  name: createdeployment-sample2
+  namespace: test
 spec:
   namespace: test
-  name: sample-operator-hello-server2
+  name: sample-operator-hello-server3

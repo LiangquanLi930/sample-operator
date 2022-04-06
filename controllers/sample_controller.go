@@ -108,8 +108,8 @@ func (r *SampleReconciler) deploymentForDemo(m *cachev1alpha1.Sample) *v1.Deploy
 			Name:      m.Spec.Name,
 			Namespace: m.Spec.Namespace,
 			OwnerReferences: []metav1.OwnerReference{{
-				APIVersion:         "cache.lilqcn/v1alpha1",
-				Kind:               "CreateDeployment",
+				APIVersion:         "cache.openshifttest/v1alpha1 ",
+				Kind:               "Sample",
 				Name:               m.Name,
 				UID:                m.UID,
 				BlockOwnerDeletion: &boolTure,
