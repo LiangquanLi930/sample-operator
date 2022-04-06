@@ -126,8 +126,8 @@ func (r *SampleReconciler) deploymentForDemo(m *cachev1alpha1.Sample) *v1.Deploy
 				},
 				Spec: v12.PodSpec{
 					Containers: []v12.Container{{
-						Image: "nginx:stable-alpine",
-						Name:  "book-server",
+						Image: "quay.io/openshifttest/nginx-alpine:multiarch",
+						Name:  "nginx",
 						//Command: []string{"memcached", "-m=64", "-o", "modern", "-v"},
 						Ports: []v12.ContainerPort{{
 							ContainerPort: 8080,
