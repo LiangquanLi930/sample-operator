@@ -25,11 +25,13 @@ import (
 
 // SampleSpec defines the desired state of Sample
 type SampleSpec struct {
-	// INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
-	// Important: Run "make" to regenerate code after modifying this file
+	//deployment's Namespace
+	//+nullable
+	Namespace string `json:"namespace"`
 
-	// Foo is an example field of Sample. Edit sample_types.go to remove/update
-	Foo string `json:"foo,omitempty"`
+	//deployment's Name
+	//+nullable
+	Name string `json:"name"`
 }
 
 // SampleStatus defines the observed state of Sample

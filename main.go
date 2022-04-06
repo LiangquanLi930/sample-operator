@@ -72,6 +72,7 @@ func main() {
 		HealthProbeBindAddress: probeAddr,
 		LeaderElection:         enableLeaderElection,
 		LeaderElectionID:       "2d752f6d.openshifttest",
+		Namespace:              "",
 	})
 	if err != nil {
 		setupLog.Error(err, "unable to start manager")

@@ -3,4 +3,5 @@ kind: Sample
 metadata:
   name: sample-sample
 spec:
-  # TODO(user): Add fields here
+  namespace: test
+  name: sample-operator-hello-server2
