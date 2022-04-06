@@ -184,6 +184,10 @@ bundle-build: ## Build the bundle image.
 bundle-push: ## Push the bundle image.
 	$(MAKE) docker-push IMG=$(BUNDLE_IMG)
 
+.PHONY: bundle-buildx-push
+bundle-buildx-push: ## Docker buildx bundle image build and push
+	docker buildx build -f bundle.Dockerfile --platform linux/amd64,linux/arm64,linux/s390x,linux/ppc64le -t ${BUNDLE_IMG} --push .
+
 .PHONY: opm
 OPM = ./bin/opm
 opm: ## Download opm locally if necessary.

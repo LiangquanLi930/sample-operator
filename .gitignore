@@ -24,3 +24,4 @@ testbin/*
 *.swo
 *~
 kubeconfig
+make bundle log

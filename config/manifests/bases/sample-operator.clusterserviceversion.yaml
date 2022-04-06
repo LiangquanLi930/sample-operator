@@ -1,0 +1,47 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: ClusterServiceVersion
+metadata:
+  annotations:
+    alm-examples: '[]'
+    capabilities: Basic Install
+  name: sample-operator.v0.0.0
+  namespace: placeholder
+spec:
+  apiservicedefinitions: {}
+  customresourcedefinitions:
+    owned:
+    - description: Sample is the Schema for the samples API
+      displayName: Sample
+      kind: Sample
+      name: samples.cache.openshifttest
+      version: v1alpha1
+  description: sample-operator
+  displayName: sample-operator
+  icon:
+  - base64data: ""
+    mediatype: ""
+  install:
+    spec:
+      deployments: null
+    strategy: ""
+  installModes:
+  - supported: false
+    type: OwnNamespace
+  - supported: false
+    type: SingleNamespace
+  - supported: false
+    type: MultiNamespace
+  - supported: true
+    type: AllNamespaces
+  keywords:
+  - sample
+  - demo
+  - test
+  links:
+  - name: Sample Operator
+    url: https://sample-operator.domain
+  maturity: alpha
+  provider:
+    name: Liangquan Li
+    url: https://github.com/LiangquanLi930/sample-operator
+  version: 0.0.0
