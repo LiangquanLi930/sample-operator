@@ -21,9 +21,9 @@
   + `Note`: cr's namespace and deployment's namespace should be the same
   + BTW: The cr is the owner of the deployment, [Owners and Dependents](https://kubernetes.io/docs/concepts/overview/working-with-objects/owners-dependents/)
 + clear
-```yaml
-operator-sdk cleanup -n sample-operator-system sample-operator --delete-all
-```
+  ```yaml
+  operator-sdk cleanup -n sample-operator-system sample-operator --delete-all
+  ```
 
 ### build for multiarch
 + context: [docker buildx](https://docs.docker.com/buildx/working-with-buildx/)
