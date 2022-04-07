@@ -20,6 +20,10 @@
   This command will create a deployment named sample-operator-hello-server3 in test
   + `Note`: cr's namespace and deployment's namespace should be the same
   + BTW: The cr is the owner of the deployment, [Owners and Dependents](https://kubernetes.io/docs/concepts/overview/working-with-objects/owners-dependents/)
++ clear
+```yaml
+operator-sdk cleanup -n sample-operator-system sample-operator --delete-all
+```
 
 ### build for multiarch
 + context: [docker buildx](https://docs.docker.com/buildx/working-with-buildx/)
@@ -32,6 +36,10 @@
   ```shell
   make test
   make bundle-buildx-push
+  ```
++ build catalog
+  ```shell
+  make catalog-buildx-push
   ```
 + help
   ```shell
